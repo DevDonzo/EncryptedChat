@@ -1,104 +1,78 @@
-Secure Chat Application
+# Secure Chat Application
 
-Made by Donzo
+**Made by Donzo**
 
-Description
+## Description
+The Secure Chat Application is a Python-based project enabling secure, encrypted communication between a server and multiple clients. It uses the AES encryption algorithm to ensure end-to-end security.
 
-The Secure Chat Application is a Python-based project designed to facilitate secure, encrypted communication between a server and multiple clients. It leverages the AES encryption algorithm to ensure end-to-end security for transmitted messages.
+## Features
+- **End-to-End Encryption**: AES encryption in CBC mode protects all messages.
+- **Multi-Client Support**: The server handles multiple clients concurrently using threading.
+- **Interactive Console**: Real-time, interactive message exchange for server and client.
+- **Cross-Platform**: Compatible with Windows, macOS, and Linux.
 
-Features
+## Technologies Used
+- **Programming Language**: Python
+- **Libraries**:
+  - `socket`: Network communication.
+  - `threading`: Handling multiple clients.
+  - `pycryptodome`: AES encryption and decryption.
 
-End-to-End Encryption: Messages are encrypted using AES (Advanced Encryption Standard) in CBC mode.
+## How to Run
+### Prerequisites
+- Install Python 3.6 or later.
+- Install the `pycryptodome` library by running:
+  ```bash
+  pip install pycryptodome
+  ```
 
-Multi-Client Support: The server can handle multiple clients concurrently using threading.
+### Steps to Run the Server
+1. Open a terminal.
+2. Navigate to the project directory.
+3. Run:
+   ```bash
+   python3 chat.py
+   ```
+4. Select `s` to start as the server.
+5. The server listens on port 9999.
 
-Interactive Console: Both server and client interfaces provide real-time, interactive message exchange.
+### Steps to Run the Client
+1. Open another terminal.
+2. Navigate to the project directory.
+3. Run:
+   ```bash
+   python3 chat.py
+   ```
+4. Select `c` to start as the client.
+5. Enter the server's IP address (`localhost` if running locally).
+6. Begin chatting securely.
 
-Cross-Platform: Compatible with Windows, macOS, and Linux.
+### Exit the Chat
+- Type `exit` to close the session.
 
-Technologies Used
-
-Programming Language: Python
-
-Libraries:
-
-socket (Built-in): For network communication.
-
-threading (Built-in): For handling multiple clients.
-
-pycryptodome: For AES encryption and decryption.
-
-How to Run
-
-Prerequisites
-
-Python 3.6 or later installed on your system.
-
-pycryptodome library installed. To install it, run:
-pip install pycryptodome
-
-Steps to Run the Server
-
-Open a terminal.
-
-Navigate to the project directory.
-
-Run the following command:
-python3 chat.py
-
-Select s when prompted to start as the server.
-
-The server will start listening on port 9999.
-
-Steps to Run the Client
-
-Open another terminal.
-
-Navigate to the project directory.
-
-Run the following command:
-python3 chat.py
-
-Select c when prompted to start as the client.
-
-Enter the server's IP address (use localhost if running on the same machine).
-
-Start chatting securely!
-
-Exiting the Chat
-
-Type exit to close the chat session gracefully.
-
-Project Structure
-
+## Project Structure
+```
 secure-chat-app/
 ├── chat.py          # Main application script
 ├── README.md        # Project documentation
 ├── requirements.txt # Python dependencies
+```
 
-Dependencies
+## Dependencies
+- Python 3.6+
+- `pycryptodome` library
 
-Python 3.6+
+## Example
+**Server**: Hello, how can I help you?  
+**You**: Hi, I have a question about encryption.  
+**Server**: Sure, go ahead!  
 
-pycryptodome library
+## Future Improvements
+- Support for file transfers.
+- GUI implementation using Tkinter or PyQt.
+- User authentication for enhanced security.
+- Deploy the server on a public cloud (AWS, Azure).
 
-Example
-
-Server: Hello, how can I help you?
-You: Hi, I have a question about encryption.
-Server: Sure, go ahead!
-
-Future Improvements
-
-Add support for file transfers.
-
-Implement a GUI using Tkinter or PyQt.
-
-Add user authentication to enhance security.
-
-Deploy the server on a public cloud (e.g., AWS, Azure).
-
-License
-
+## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
